@@ -1,0 +1,136 @@
+[
+  {
+    "chunk_title": "Basic Project Data and Institutional Alignment",
+    "chunk": "Basic Project Data ▪ Country/Region: BRAZIL/CSC - Southern Cone ▪ TC Name: Support for the impact evaluation of the Vida Nova Program (BR-L1588) ▪ TC Number: BR-T1688 ▪ Team Leader/Members: SILVA HERREROS, JORGE ALEJANDRO (CSD/HUD) Team Leader; GALLEGO DURAN, JORGE ANDRES (CSD/HUD) Alternate Team Leader; TAVARES SOUSA MARIA ELISA (CSC/CBR); CUESTA BERNAL, ANA MARIA (SPD/SDV); QUINTERO ESCOBAR, LUIS EDUARDO (SPD/SDV); DE BARROS TORRES GABRIEL (CSD/HUD); HOBBS, JASON ANTHONY (CSD/HUD); GONCALVES DOS SANTOS, CAROLINA (LEG/SGO); SANTOS LOPES AMANDA (CSC/CBR); JORGINO AZEVEDO, ANA CAROLINA (VPC/FMP); KESSEL AKERMAN, ARIEL (SPD/SDV); VANZAN DA SILVA, LUCIANA (VPS/ESG); AVILA, FRANCY DIANELA (CSD/HUD); HERNANDEZ YADER ANTONIO (CSD/HUD); GONZALEZ, JORGE LUIS (VPC/FMP) ▪ Taxonomy: Operational Support ▪ Number and name of State Housing Program - State of Paraná - Vida Nova Project - BR- operation supported by L1588 the TC: ▪ Beneficiary: Companhia de Habitação do Paraná (COHAPAR) ▪ Local counterpart US$0.00 funding: ▪ Disbursement period: 36 months ▪ Types of consultants: Individuals; Firms ▪ Prepared by Unit: CSD/HUD - Housing & Urban Development ▪ Unit of Disbursement CSC/CBR - Country Office Brazil Responsibility: ▪ TC included in Country No Strategy (y/n): ▪ TC included in CPD No (y/n): ▪ Alignment to the Update Institutional capacity, rule of law, and citizen security; Public sector policy to the Institutional and management; Social protection and human capital development Strategy 2010-2020: II.",
+    "chunk_id": "BR-T1688_1",
+    "policy_references": [
+      "housing_policy_and_affordability",
+      "urban_infrastructure_and_services",
+      "urban_governance_and_institutional_capacity",
+      "public_finance_and_municipal_management"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Objective of the Technical Cooperation",
+    "chunk": "Objective and Justification 2.1 The objective of this Technical Cooperation (TC) is to design and support the implementation of the impact evaluation of the Vida Nova Program (5871/OC-BR), a housing initiative in Paraná that promotes the resettlement of vulnerable families into adequate housing with secure tenure and access to basic services.",
+    "chunk_id": "BR-T1688_2",
+    "policy_references": [
+      "housing_policy_and_affordability",
+      "informal_settlements_and_social_inclusion",
+      "urban_governance_and_institutional_capacity"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Evidence Gaps and Contribution of the Evaluation",
+    "chunk": "2.2 The available evidence regarding the effectiveness of large-scale resettlement programs in Brazil and LAC is scarce, particularly concerning the unique impacts of relocation. Evidence on the effect of a comprehensive approach to resettlement that adds other coordinated social programs is also lacking. Instead, most existing studies in the region focus on isolated in-situ upgrading initiatives. By generating causal estimates of the Vida Nova program’s effects across domains such as household welfare, neighborhood cohesion, perceived safety, labor income, and mental health, this TC will help fill these gaps and inform the design and scaling of housing policies.",
+    "chunk_id": "BR-T1688_3",
+    "policy_references": [
+      "housing_policy_and_affordability",
+      "informal_settlements_and_social_inclusion",
+      "sustainable_cities_and_environmental_management",
+      "urban_governance_and_institutional_capacity"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Evaluation Design and Methodology (DID)",
+    "chunk": "2.3 The evaluation plans to adopt a staggered difference-in-differences (DID) design that leverages the phased rollout of Vida Nova across communities. Beneficiary families will receive the new housing and social services at different times, creating variations that can be exploited for causal identification. This DID approach allows the evaluation to control for common time trends while estimating the program’s impact, using later-treated groups as controls for the early-treated groups. Under the assumption of parallel trends of potential outcomes between treated and not-yet-treated, this method allows for estimation of causal effects.",
+    "chunk_id": "BR-T1688_4",
+    "policy_references": [
+      "urban_governance_and_institutional_capacity",
+      "housing_policy_and_affordability",
+      "public_finance_and_municipal_management"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Data Sources, Census, and Longitudinal Design",
+    "chunk": "2.4 Data will come from surveys of the beneficiary households as well as from administrative data provided by multiple local government divisions. Key variables for the evaluation have been defined. The remaining details – including the timing of data collection before and after resettlement, which are essential for testing pre-trend assumptions and evaluating short- and medium-term impacts – will be defined during the drafting of the detailed evaluation plan methodology, which is also partially funded by this TC. 2.5 Data will be collected multiple times over a period of three years, starting at least 18 months before resettlement and ending 18 months afterward. The first collection will be a census, administered among all the families in the 39 communities eligible for the Program. Following IDB Safeguards standards, this census data will be used to freeze enrollment for the program, preventing the expansion of the informal settlements. The Vida Nova Project will finance this census, identifying families and their social support needs. 2.6 This TC will finance consulting services to gather the information needed for the impact evaluation, through the collection of primary data, and the identification and request of complementary administrative data. The primary data will be collected for a sample of the families eligible to receive the program. The frequency of collection and size of the sample will be defined in the detailed evaluation plan described in paragraph 2.4.",
+    "chunk_id": "BR-T1688_5",
+    "policy_references": [
+      "urban_governance_and_institutional_capacity",
+      "public_finance_and_municipal_management",
+      "informal_settlements_and_social_inclusion"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Building a Culture of Evidence and Strategic Alignment",
+    "chunk": "2.7 In addition, this TC aims to create a culture of evidence within COHAPAR. Staff will be trained to manage surveys and administrative data, interpret impact estimates, and translate evidence into policy. Institutional Strategy: Transformation for Greater Scale and Impact (CA-631) and contributes to the objective of (i) reducing poverty and inequality. In addition, it is aligned with the operational focus areas: (i) social protection and human capital development, by documenting whether safer tenure and better housing translate into improved wellbeing; and (iii) institutional capacity, rule of law, and citizen security, by strengthening the State’s ability to use evidence in decision making. This project has been selected for DEIF under a rigorous competitive process involving VPS, VPC, and SPD. The DEIF initiative supports projects that generate knowledge and address strategic gaps in development effectiveness through impact evaluations, analysis of execution factors, and effective enhancement initiatives. Following the OC-SDP framework, this initiative is aligned with Window 2, under the priority area “Inclusive Social Development”.",
+    "chunk_id": "BR-T1688_6",
+    "policy_references": [
+      "urban_governance_and_institutional_capacity",
+      "public_finance_and_municipal_management",
+      "informal_settlements_and_social_inclusion",
+      "sustainable_cities_and_environmental_management"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Component I – Finalize Evaluation Design",
+    "chunk": "Description of Activities and Outputs 3.1 Component I: Finalize Evaluation Design. This component will finalize the evaluation methodology, define implementation details, and ensure access to administrative data. Activities include mapping datasets, establishing data-sharing agreements, governance protocols, cleaning and linking data. Outputs: methodology report and data access plan.",
+    "chunk_id": "BR-T1688_7",
+    "policy_references": [
+      "urban_governance_and_institutional_capacity",
+      "public_finance_and_municipal_management",
+      "smart_cities_and_digital_transformation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Component II – Primary Data Collection and Capacity Building",
+    "chunk": "3.2 Component II: Primary Data Collection and Capacity Building. This component will implement a survey pilot, baseline household surveys, and training for COHAPAR staff. Activities include refining instruments, data collection, and capacity building in evaluation methods. Outputs: training, pilot, and data collection reports, plus dataset for analysis.",
+    "chunk_id": "BR-T1688_8",
+    "policy_references": [
+      "urban_governance_and_institutional_capacity",
+      "public_finance_and_municipal_management",
+      "informal_settlements_and_social_inclusion"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Budget, Executing Agency, and Execution Structure",
+    "chunk": "Budget Finalize Evaluation Design US$12,000.00 US$12,000.00 Primary Data Collection and Capacity Building US$88,000.00 US$88,000.00 Total US$100,000.00 US$100,000.00 V. Executing Agency and Execution Structure 5.1 The IDB will be the executing agency of the TC. CSD/HUD will lead the execution in close coordination with the beneficiary. The unit with disbursement Responsibility will be CSC/CBR. 5.2 At the request of the beneficiary, the Bank, through the Housing and Urban Development Division (CSD/HUD), will serve as the executing agency of the TC. In accordance with Annex II of OP-619-4, Bank execution — requested by COHAPAR and the Government of Paraná — is justified by the limited institutional capacity to lead the design and implementation of a rigorous impact evaluation, as well as by the need to ensure methodological independence and technical consistency throughout the evaluation process.",
+    "chunk_id": "BR-T1688_9",
+    "policy_references": [
+      "public_finance_and_municipal_management",
+      "urban_governance_and_institutional_capacity"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Project Risks, Mitigation Measures, and Implementation Phasing",
+    "chunk": "Project Risks and Issues 6.1 The following risks and mitigation measures have been identified: (i) potential delays in survey implementation due to logistical challenges in reaching some of the informal settlements or due to delays in the resettlement schedule. This risk will be mitigated by closely coordinating with COHAPAR and local implementation teams to ensure alignment between the evaluation timeline and the program's rollout calendar; (ii) limited survey response rates or attrition over the three-year evaluation period, which could affect statistical power. To mitigate this, the survey firm will implement standardized tracking protocols, pilot-test the instruments to ensure respondent understanding, and use incentives and community engagement strategies to encourage participation. No legal or institutional changes are required for project execution, and the activities will be phased in alignment with the program’s implementation schedule.",
+    "chunk_id": "BR-T1688_10",
+    "policy_references": [
+      "urban_governance_and_institutional_capacity",
+      "public_finance_and_municipal_management",
+      "informal_settlements_and_social_inclusion"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Environmental and Social Safeguards Compliance",
+    "chunk": "Environmental and Social Aspects 7.1 This Technical Cooperation is intended to finance pre-feasibility or feasibility studies of specific investment projects and the environmental and social studies associated with them; therefore, the terms of reference and products of this TC will be consistent with the applicable requirements of the Bank’s Environmental and Social Policy Framework (ESPF).",
+    "chunk_id": "BR-T1688_11",
+    "policy_references": [
+      "sustainable_cities_and_environmental_management",
+      "climate_resilience_and_disaster_risk_management",
+      "urban_governance_and_institutional_capacity"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Compliant"
+  }
+]

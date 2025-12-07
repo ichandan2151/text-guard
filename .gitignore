@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+
+# Large data and model artifacts – do NOT store in git
+dataPDF/
+models/
+*.joblib
+*.safetensors
+*.pt
+*.bin
+*.pkl
+
+# Optional: ignore logs, temp files
+*.log
+# Do not track local API keys
+src/openAI_APIKEY.txt

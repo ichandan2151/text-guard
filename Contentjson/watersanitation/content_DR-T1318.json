@@ -1,0 +1,94 @@
+[
+  {
+    "chunk_title": "Objective and Justification – Main Objective",
+    "chunk": "2.1 The main objective of this Technical Cooperation (TC) is to develop a sustainable technical and financial mechanism for the restoration, conservation, and monitoring of coral reefs in the Dominican Republic. This mechanism will integrate activities such as awareness campaigns, technical analysis, financing strategy design, pilot tests, and effectiveness evaluations to ensure its efficiency and scalability.",
+    "chunk_id": "DR-T1318_2.1",
+    "policy_references": [
+      "nature_based_solutions_and_ecosystems",
+      "climate_resilience_and_flood_drought",
+      "water_quality_and_pollution_control",
+      "tariffs_financing_and_sustainability",
+      "behavior_change_and_community_engagement",
+      "institutional_capacity_and_regulation"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Objective and Justification – Coral Restoration Challenges and Link to Sanitation Program",
+    "chunk": "2.2 Coral restoration in the Dominican Republic faces significant challenges due to the lack of a sustainable financing system that ensures continuity and scaling of existing efforts. Current initiatives, though valuable, are temporary and fragmented, limiting their impact on biodiversity protection and the resilience of marine ecosystems. The absence of an integrated and long-term approach hinders the response to the accelerated loss of reefs. Therefore, this TC focuses on designing a technical and financial mechanism that structures and enhances available resources, ensuring restoration actions are sustainable, scalable, and effective in protecting natural capital and fostering coastal economic development. The activities financed by this TC complement and enhance the expected impact of the Program DR-L1165 (Universal Sanitation Program in Coastal and Tourist Cities of the Dominican Republic II), whose main objective is to improve access to quality sanitation services in coastal and tourist cities, prioritizing environmental sustainability and climate resilience. The program allocates US$1.5 million for coral reef recovery, recognizing their crucial role in coastal protection and biodiversity. Additional resources from this TC will be mobilized to design and implement a sustainable technical and financial mechanism, ensuring the continuity and scalability of coral restoration efforts. These resources accelerate the strategic actions of DR-L1165, integrating nature-based solutions with large infrastructure investments and reinforcing natural capital conservation and the resilience of coastal communities to the effects of climate change.",
+    "chunk_id": "DR-T1318_2.2",
+    "policy_references": [
+      "nature_based_solutions_and_ecosystems",
+      "climate_resilience_and_flood_drought",
+      "disaster_risk_management_and_resilience",
+      "water_quality_and_pollution_control",
+      "urban_water_and_drainage_systems",
+      "infrastructure_investment_and_O&M",
+      "tariffs_financing_and_sustainability"
+    ],
+    "risk_level": "High",
+    "compliance_status": "Partially_Compliant"
+  },
+  {
+    "chunk_title": "Description of Activities and Outputs – Component I: Awareness and Participation",
+    "chunk": "3.1 Component I: Awareness, Mobilization and Participation for the Coral Restoration Mechanism. This component will build awareness, commitment, and active participation among the Dominican population and key public and private actors, integrating a gender and diversity approach along with behavioral change techniques.",
+    "chunk_id": "DR-T1318_3.1",
+    "policy_references": [
+      "behavior_change_and_community_engagement",
+      "gender_social_inclusion_and_vulnerability",
+      "nature_based_solutions_and_ecosystems"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Description of Activities and Outputs – Component II: Technical Solutions and Scalability",
+    "chunk": "3.2 Component II: Analysis of Technical Solutions and Scalability Strategies for Coral Restoration. This component focuses on identifying, testing, and evaluating innovative technical solutions that incorporate local and regional perspectives in order to maximize their impact and applicability.",
+    "chunk_id": "DR-T1318_3.2",
+    "policy_references": [
+      "innovation_and_digital_technology",
+      "nature_based_solutions_and_ecosystems",
+      "data_monitoring_and_information_systems"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Description of Activities and Outputs – Component III: Financial and Governance Mechanism",
+    "chunk": "3.3 Component III: Design of the Financial and Governance Mechanism for Coral Sustainability. This component will establish a financial and governance framework to ensure the sustainability of restoration efforts, integrating innovation, transparency, and inclusive participation, with a national-level monitoring approach to assess the status and evolution of coral reefs across the country.",
+    "chunk_id": "DR-T1318_3.3",
+    "policy_references": [
+      "institutional_capacity_and_regulation",
+      "tariffs_financing_and_sustainability",
+      "data_monitoring_and_information_systems",
+      "nature_based_solutions_and_ecosystems"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Budget",
+    "chunk": "IV. Budget. The indicative budget for this TC totals US$400,000.00, distributed across three components: (1) Awareness, Mobilization and Participation for the Coral Restoration Mechanism (US$70,000); (2) Analysis of Technical Solutions and Scalability Strategies for Coral Restoration (US$270,000); and (3) Design of the Financial and Governance Mechanism for Coral Sustainability (US$60,000).",
+    "chunk_id": "DR-T1318_4",
+    "policy_references": [
+      "tariffs_financing_and_sustainability",
+      "infrastructure_investment_and_O&M"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Executing Agency, Risks and ESPF Alignment",
+    "chunk": "V. Executing Agency and Execution Structure. At the request of the Government of the Dominican Republic, the Bank, through the Water and Sanitation Division (WSA), in collaboration with the Climate Change Division (CCS), will be responsible for implementing this TC by contracting consultancies to carry out the planned activities. The Bank will identify the necessary studies and technical work, select and hire consultants, and manage the execution and delivery of consultancy services following its established procurement procedures. The execution mechanism is justified because WSA, CCS and the IDB have substantial experience providing technical assistance in areas such as sanitation and water remediation, climate-friendly infrastructure, nature-based solutions, low-carbon technology, and implementation of nationally determined contributions. VI. Project Risks and Issues. Key risks include extreme natural phenomena such as hurricanes or severe storms that could damage or destroy restored corals or related infrastructure; lack of continuity in funding that could disrupt restoration and monitoring activities; challenges in inter-institutional coordination among public, private and NGO entities; and operational risks during pilot execution that could affect the effectiveness of the financing and restoration mechanism. Mitigation measures involve contingency actions, diversified and mandatory fundraising, clear governance and coordination frameworks, and detailed planning and monitoring of the pilot phase with flexibility for adjustments. VII. Environmental and Social Aspects. This TC does not have applicable requirements under the Bank’s Environmental and Social Policy Framework (ESPF).",
+    "chunk_id": "DR-T1318_5to7",
+    "policy_references": [
+      "institutional_capacity_and_regulation",
+      "nature_based_solutions_and_ecosystems",
+      "disaster_risk_management_and_resilience",
+      "data_monitoring_and_information_systems"
+    ],
+    "risk_level": "High",
+    "compliance_status": "In_Progress"
+  }
+]

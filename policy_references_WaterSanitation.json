@@ -1,0 +1,74 @@
+[
+  {
+    "policy": "water_access_and_equity",
+    "definition": "Policies and programs that expand fair, affordable, and reliable access to safe drinking water for all populations, including peri-urban, rural, and marginalized communities."
+  },
+  {
+    "policy": "sanitation_and_hygiene",
+    "definition": "Policies that improve household and community sanitation, sewerage, fecal sludge management, and hygiene practices to protect public health."
+  },
+  {
+    "policy": "wastewater_treatment_and_reuse",
+    "definition": "Policies and investments to collect, treat, and safely reuse wastewater (including greywater), reducing pollution and closing water loops."
+  },
+  {
+    "policy": "water_resources_and_watershed_management",
+    "definition": "Integrated management of surface and groundwater, aquifers, and river basins, including allocation, protection, and long-term planning of water resources."
+  },
+  {
+    "policy": "climate_resilience_and_flood_drought",
+    "definition": "Measures that prepare water and sanitation systems for climate impacts such as floods, droughts, sea-level rise, and extreme weather events."
+  },
+  {
+    "policy": "water_quality_and_pollution_control",
+    "definition": "Standards, monitoring, and enforcement to control contamination of water bodies from urban, industrial, agricultural, and tourism-related sources."
+  },
+  {
+    "policy": "nature_based_solutions_and_ecosystems",
+    "definition": "Use of ecosystems (wetlands, reefs, mangroves, forests) and nature-based solutions to improve water security, protect coasts, and enhance biodiversity."
+  },
+  {
+    "policy": "rural_and_small_town_services",
+    "definition": "Policies focused on extending and improving water and sanitation services in rural areas, small towns, and dispersed communities."
+  },
+  {
+    "policy": "urban_water_and_drainage_systems",
+    "definition": "Planning and investment in urban water supply, sewerage, stormwater drainage, and flood management infrastructure."
+  },
+  {
+    "policy": "disaster_risk_management_and_resilience",
+    "definition": "Measures that link water and sanitation systems to disaster preparedness, emergency response, and rapid recovery after shocks."
+  },
+  {
+    "policy": "infrastructure_investment_and_O&M",
+    "definition": "Financing, building, and maintaining water, sanitation, and drainage infrastructure, with emphasis on asset management and service continuity."
+  },
+  {
+    "policy": "institutional_capacity_and_regulation",
+    "definition": "Legal frameworks, sector governance, utility reform, and capacity building for regulators, ministries, and service providers."
+  },
+  {
+    "policy": "tariffs_financing_and_sustainability",
+    "definition": "Tariff design, subsidies, blended finance, and fiscal mechanisms that ensure financial sustainability while protecting vulnerable users."
+  },
+  {
+    "policy": "data_monitoring_and_information_systems",
+    "definition": "Systems for gathering, analyzing, and publishing data on service coverage, performance, water quality, and resource status."
+  },
+  {
+    "policy": "gender_social_inclusion_and_vulnerability",
+    "definition": "Approaches that address differentiated water and sanitation needs of women, children, indigenous peoples, and other vulnerable groups."
+  },
+  {
+    "policy": "innovation_and_digital_technology",
+    "definition": "Use of innovative technologies, digital tools, and new business models to improve water and sanitation planning, operations, and service delivery."
+  },
+  {
+    "policy": "solid_waste_and_circular_economy",
+    "definition": "Policies that connect water and sanitation with solid waste management, recycling, circular economy, and reduction of waste streams that affect water bodies."
+  },
+  {
+    "policy": "behavior_change_and_community_engagement",
+    "definition": "Programs and campaigns that promote behavior change, awareness, and community participation in water, sanitation, and ecosystem protection."
+  }
+]

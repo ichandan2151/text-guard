@@ -1,0 +1,74 @@
+[
+    {
+        "policy": "climate_ghg_emissions",
+        "definition": "Policies focused on reducing greenhouse gas emissions from the transportation sector (e.g., CO₂ standards, carbon taxes, emissions reporting)"
+    },
+    {
+        "policy": "transport_electrification",
+        "definition": "Policies supporting electric vehicles (EVs), charging networks, electric public transit, and electrification of freight fleets."
+    },
+    {
+        "policy": "low_carbon_fuels",
+        "definition": "Policies promoting fuels that emit less carbon than gasoline or diesel—biofuel mandates, hydrogen standards, renewable diesel, e-fuels."
+    },
+    {
+        "policy": "transport_demand_management",
+        "definition": "Policies reducing the need to travel or shifting demand to more efficient modes (e.g., congestion pricing, telecommuting, carpool incentives)."
+    },
+    {
+        "policy": "land_use_and_smart_growth",
+        "definition": "Urban planning policies that reduce sprawl by designing compact, walkable cities and aligning transportation with development (e.g., Transit-Oriented Development)."
+    },
+    {
+        "policy": "public_and_active_transportation",
+        "definition": "Policies expanding and improving public transit, cycling, walking infrastructure, micromobility (e-bikes, scooters), and multimodal networks."
+    },
+    {
+        "policy": "transport_infrastructure",
+        "definition": "Investment and regulation for roads, bridges, rail, transit lines, ports, bike networks, and general transportation facilities (maintenance + new projects)."
+    },
+    {
+        "policy": "climate_resilience_and_adaptation",
+        "definition": "Policies preparing transport systems for climate impacts like flooding, heat, storms, sea-level rise (e.g., resilient roads, elevated rail lines)."
+    },
+    {
+        "policy": "transport_equity_and_access",
+        "definition": "Ensuring fair access to transportation for low-income, rural, marginalized communities; affordable mobility and environmental justice goals."
+    },
+    {
+        "policy": "transport_safety",
+        "definition": "Rules and infrastructure improving safety for all users—speed limits, Vision Zero programs, vehicle crash standards, pedestrian safety design."
+    },
+    {
+        "policy": "freight_and_goods_movement",
+        "definition": "Policies focused on freight logistics, ports, trucking, rail cargo efficiency, reducing pollution from shipping and heavy-duty transport."
+    },
+    {
+        "policy": "transport_funding_and_finance",
+        "definition": "How transportation is paid for—fuel taxes, tolls, federal grants, private partnerships, road pricing, budget allocation."
+    },
+    {
+        "policy": "governance_and_regulation",
+        "definition": "Legal and institutional frameworks: government agencies, regulatory approvals, interdepartmental coordination, compliance enforcement."
+    },
+    {
+        "policy": "mobility_innovation_and_technology",
+        "definition": "Policies for emerging mobility tech—autonomous vehicles, ride-hailing, ITS systems, smart traffic control, connected vehicles, MaaS platforms."
+    },
+    {
+        "policy": "air_quality_and_health",
+        "definition": "Policies targeting air pollution (PM2.5, NOx, ozone) and health impacts from transportation: noise, asthma, emissions near highways."
+    },
+    {
+        "policy": "behavior_change_policies",
+        "definition": "Programs that change user behavior through education, incentives, and awareness campaigns (car-free days, cycling incentives, transit marketing)."
+    },
+    {
+        "policy": "vehicle_standards_and_efficiency",
+        "definition": "Rules that regulate fuel efficiency, emission limits, manufacturing standards, clean vehicle technologies, fleet standards."
+    },
+    {
+        "policy": "accessibility_and_disability",
+        "definition": "Policies ensuring transportation works for people with disabilities—ADA compliance, low-floor buses, accessible stations, adaptive signals."
+    }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "policy": "urban_infrastructure_and_services",
+    "definition": "Policies and measures related to planning, financing, and managing basic urban infrastructure and services such as roads, water, sanitation, drainage, solid waste, public spaces, and community facilities."
+  },
+  {
+    "policy": "housing_and_settlements",
+    "definition": "Policies addressing housing supply, quality, affordability, regularization of informal settlements, slum upgrading, and resettlement or relocation programs."
+  },
+  {
+    "policy": "land_use_and_urban_planning",
+    "definition": "Policies on spatial planning, zoning, land management, densification, mixed-use development, and alignment of land use plans with infrastructure and service provision."
+  },
+  {
+    "policy": "urban_resilience_and_climate",
+    "definition": "Policies to increase urban resilience to climate change and natural hazards, including flood and storm protection, resilient infrastructure design, and climate adaptation strategies."
+  },
+  {
+    "policy": "social_inclusion_and_equity",
+    "definition": "Policies targeting reduced inequalities and improved inclusion for vulnerable groups (low-income communities, migrants, women, youth, Afro-descendants, Indigenous Peoples, etc.) in access to housing, services, and opportunities."
+  },
+  {
+    "policy": "urban_economic_development",
+    "definition": "Policies to support local economic development, job creation, productive activities, urban regeneration, and improved conditions for businesses in cities."
+  },
+  {
+    "policy": "institutional_capacity_and_governance",
+    "definition": "Policies related to strengthening public institutions, coordination between agencies and levels of government, governance arrangements, regulatory frameworks, and implementation capacity."
+  },
+  {
+    "policy": "fiscal_sustainability_and_finance",
+    "definition": "Policies and instruments related to municipal finance, creditworthiness, debt management, subnational borrowing, budget allocation, and funding of urban investments."
+  },
+  {
+    "policy": "environmental_management_and_natural_capital",
+    "definition": "Policies on environmental protection, pollution control, conservation and restoration of ecosystems, nature-based solutions, and sustainable use of natural resources in urban areas."
+  },
+  {
+    "policy": "risk_disaster_management",
+    "definition": "Policies addressing disaster risk identification, reduction, preparedness, emergency response, and recovery in cities and human settlements."
+  },
+  {
+    "policy": "data_monitoring_and_evaluation",
+    "definition": "Policies and practices on data systems, indicators, monitoring frameworks, impact evaluation, reporting, and evidence-based decision-making in urban policy."
+  },
+  {
+    "policy": "community_engagement_and_participation",
+    "definition": "Policies supporting participation of communities, civil society, and local stakeholders in planning, implementation, and oversight of urban and housing interventions."
+  },
+  {
+    "policy": "gender_and_diversity_in_urban_development",
+    "definition": "Policies explicitly integrating gender equality and diversity considerations in urban planning, housing programs, and service provision."
+  },
+  {
+    "policy": "private_sector_and_ppp",
+    "definition": "Policies enabling private sector participation, public–private partnerships (PPPs), and other collaborative models in financing, building, and operating urban infrastructure and housing."
+  },
+  {
+    "policy": "innovation_and_smart_cities",
+    "definition": "Policies fostering digital solutions, smart-city tools, innovative technologies, and new models for managing urban services and infrastructure."
+  }
+]

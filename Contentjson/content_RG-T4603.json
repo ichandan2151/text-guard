@@ -1,0 +1,147 @@
+[
+  {
+    "chunk_title": "General Objective of the TC",
+    "chunk": "The general objective of this Technical Cooperation (TC) is to establish the “LAC Regional Climate Change Platform for City Finance Secretaries” to support city finance secretaries in Latin America and the Caribbean (LAC) to mobilize climate financing, share knowledge, foster dialogue, and implement scalable solutions to address climate change (CC).",
+    "chunk_id": "RG-T4603_2.1",
+    "policy_references": [
+      "fiscal_management_and_finance",
+      "urban_governance_and_institutions",
+      "climate_resilience_and_adaptation"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Specific Objectives",
+    "chunk": "The specific objectives are: (i) create a Regional Roadmap for city climate finance; (ii) generate and share knowledge through exchange of experiences and best practices; (iii) strengthen dialogue among cities and stakeholders; and (iv) scale up climate finance strategies by providing access to expert advice, training, and tools.",
+    "chunk_id": "RG-T4603_2.2",
+    "policy_references": [
+      "fiscal_management_and_finance",
+      "urban_governance_and_institutions",
+      "public_participation_and_engagement",
+      "digital_transformation_and_innovation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Urban Climate Finance Challenges",
+    "chunk": "Cities and local governments in LAC are taking steps to build climate resilience and reduce emissions, but financing gaps and limited technical and financial capacity remain major obstacles.",
+    "chunk_id": "RG-T4603_2.3",
+    "policy_references": [
+      "fiscal_management_and_finance",
+      "climate_resilience_and_adaptation",
+      "urban_governance_and_institutions"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Regional Need for Coordination",
+    "chunk": "The platform seeks to provide a coordination mechanism for climate finance implementation, enabling cities to adopt a shared roadmap and common financial strategies.",
+    "chunk_id": "RG-T4603_2.4",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "fiscal_management_and_finance",
+      "public_participation_and_engagement"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Regional Added Value",
+    "chunk": "Through enhanced dialogue, knowledge sharing, and development of tools and resources, the platform fosters cooperation among cities facing shared climate challenges.",
+    "chunk_id": "RG-T4603_2.5",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "climate_resilience_and_adaptation",
+      "public_participation_and_engagement"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Role of Finance Secretaries",
+    "chunk": "City Finance Secretaries are central to implementing climate finance strategies, overseeing public spending, structuring green budgets, influencing procurement, and mobilizing private investment.",
+    "chunk_id": "RG-T4603_2.6",
+    "policy_references": [
+      "fiscal_management_and_finance",
+      "urban_governance_and_institutions",
+      "environmental_sustainability"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Previous IDB Work",
+    "chunk": "The IDB has supported a similar platform at the national ministry level and has experience in urban development, fiscal management, project financing, and climate initiatives.",
+    "chunk_id": "RG-T4603_2.7",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "fiscal_management_and_finance"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Compliant"
+  },
+  {
+    "chunk_title": "Strategic Alignment",
+    "chunk": "The TC aligns with the IDB Institutional Strategy by addressing climate change, fostering sustainable urban development, strengthening institutional capacity, and enabling subnational finance improvements.",
+    "chunk_id": "RG-T4603_2.8",
+    "policy_references": [
+      "urban_planning_and_land_use",
+      "urban_governance_and_institutions",
+      "fiscal_management_and_finance",
+      "climate_resilience_and_adaptation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Compliant"
+  },
+  {
+    "chunk_title": "Description of Components",
+    "chunk": "Component 1 covers governance and project coordination. Component 2 establishes the regional platform. Component 3 strengthens city finance strategies through collaboration and training.",
+    "chunk_id": "RG-T4603_3.1",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "fiscal_management_and_finance",
+      "digital_transformation_and_innovation",
+      "public_participation_and_engagement"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Beneficiaries",
+    "chunk": "The key beneficiaries are finance secretariats of four cities: Mendoza, São Paulo, Rio de Janeiro, and Bogotá—selected for leadership in sustainable urban finance.",
+    "chunk_id": "RG-T4603_3.2",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "fiscal_management_and_finance",
+      "social_inclusion_and_equity"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Major Risks",
+    "chunk": "Risks include administrative changes, coordination challenges, and technical capacity limitations. Mitigation includes strong governance, periodic training, stakeholder engagement, and collaboration.",
+    "chunk_id": "RG-T4603_5.1",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "disaster_risk_management",
+      "social_inclusion_and_equity"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Environmental & Social Compliance",
+    "chunk": "The TC finances diagnostics, policy dialogues, and capacity building consistent with the Bank’s Environmental and Social Policy Framework (ESPF).",
+    "chunk_id": "RG-T4603_7.1",
+    "policy_references": [
+      "environmental_sustainability",
+      "urban_governance_and_institutions"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Compliant"
+  }
+]

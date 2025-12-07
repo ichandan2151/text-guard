@@ -1,0 +1,139 @@
+[
+  {
+    "chunk_title": "Objective and Justification – General Objective",
+    "chunk": "2.1 The objective of this Technical Cooperation (TC) is to promote a better performance in the water and sanitation sector in Colombia, working at the utility level as well as at the public entities level.",
+    "chunk_id": "CO-T1779_2.1",
+    "policy_references": [
+      "utility_management_and_capacity",
+      "water_access_and_equity",
+      "institutional_capacity_and_regulation"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Objective and Justification – Sector Progress and Institutional Strengthening",
+    "chunk": "2.2 During the last three decades, Colombia has considerably strengthened the water and sanitation (W&S) sector. The country set up a comprehensive legal and institutional framework to improve water and sanitation services. The IDB in Colombia has promoted best practices in the W&S sector in a consistent manner since 2016 to improve W&S service provision through technical cooperations such as “Comprehensive development of Urban Water and Sewerage Companies in Colombia (CO-T1457) - phase I” and “Pilot of Alternative Financing Mechanisms for the Drinking Water Sector in Colombia CO-T1556.”",
+    "chunk_id": "CO-T1779_2.2a",
+    "policy_references": [
+      "institutional_capacity_and_regulation",
+      "utility_management_and_capacity",
+      "water_access_and_equity",
+      "sector_financing_and_tariffs"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Objective and Justification – VEI Partnership and Rural Utility Support",
+    "chunk": "From 2019 through 2024, the IDB has worked in partnership with a non-for-profit consortium of public Dutch utilities (VEI) whose mandate is to share knowledge and transfer skills to make W&S utilities in low-income areas stronger, financially sustainable, and more climate resilient. This approach supports reducing gaps in service provision and promoting universalization of efficient, affordable, sustainable, and good quality services. It also supports government entities in developing policies that improve W&S services in rural and urban areas.",
+    "chunk_id": "CO-T1779_2.2b",
+    "policy_references": [
+      "rural_and_small_town_services",
+      "water_access_and_equity",
+      "utility_management_and_capacity",
+      "climate_resilience_and_flood_drought"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "Partially_Compliant"
+  },
+  {
+    "chunk_title": "Description of Activities – Component I: Urban Utilities Performance Improvement",
+    "chunk": "3.1 Component I: This component will entail capacity building and knowledge transfer from VEI, accompanying the Colombian utilities in their work and systemically improving the maturity of their working processes through training, capacity development, and knowledge transfer.",
+    "chunk_id": "CO-T1779_3.1",
+    "policy_references": [
+      "utility_management_and_capacity",
+      "water_access_and_equity",
+      "institutional_capacity_and_regulation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Description of Activities – Component II: Water and Sanitation Rural & Urban Sectoral Dialogue",
+    "chunk": "3.2 Component II: This component will finance activities to support the National Government entities in charge of the W&S sector to strengthen their capacity and promote dialogue related to the improvement of W&S providers' performance.",
+    "chunk_id": "CO-T1779_3.2",
+    "policy_references": [
+      "institutional_capacity_and_regulation",
+      "rural_and_small_town_services",
+      "urban_water_and_drainage_systems"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Description of Activities – Component III: Non-Financial Solutions for Utilities’ Access to Financing",
+    "chunk": "3.3 Component III: Measures to bring closer supply and demand for financial resources will be implemented to reduce knowledge gaps between financiers and utilities.",
+    "chunk_id": "CO-T1779_3.3",
+    "policy_references": [
+      "tariffs_financing_and_sustainability",
+      "institutional_capacity_and_regulation",
+      "utility_management_and_capacity"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Description of Activities – Component IV: Dissemination Activities",
+    "chunk": "3.4 Component IV: This component will finance activities to disseminate findings, experiences, and products coming from this TC and CO-T17772.",
+    "chunk_id": "CO-T1779_3.4",
+    "policy_references": [
+      "data_monitoring_and_information_systems",
+      "institutional_capacity_and_regulation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Description of Activities – Component V: External Audit",
+    "chunk": "3.5 Component V: An external audit will be funded to ensure accountability on the part of VEI as executing agency.",
+    "chunk_id": "CO-T1779_3.5",
+    "policy_references": [
+      "institutional_capacity_and_regulation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Compliant"
+  },
+  {
+    "chunk_title": "Executing Agency and Structure",
+    "chunk": "5.1 The Inter-American Development Bank through its Water and Sanitation Division will execute USD 1,026,000.00 and VEI will execute USD 400,000.00 from component 1.",
+    "chunk_id": "CO-T1779_5.1",
+    "policy_references": [
+      "institutional_capacity_and_regulation",
+      "tariffs_financing_and_sustainability"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Executing Agency – Complementarity with Previous TCs",
+    "chunk": "5.2 The Bank gained significant experience while executing prior Colombian TCs such as CO-T1417, CO-T1457, and CO-T1556, and will apply this to the current operation. The execution period will be 36 months with 3 additional months for disbursements.",
+    "chunk_id": "CO-T1779_5.2",
+    "policy_references": [
+      "institutional_capacity_and_regulation",
+      "utility_management_and_capacity"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Project Risks and Issues",
+    "chunk": "6.1 Working with government entities entails the risk of discontinuity due to slow response and staff changes at different levels. The TC will mitigate these risks through continuous dialogue and monitoring.",
+    "chunk_id": "CO-T1779_6.1",
+    "policy_references": [
+      "institutional_capacity_and_regulation",
+      "utility_management_and_capacity",
+      "disaster_risk_management_and_resilience"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "Partially_Compliant"
+  },
+  {
+    "chunk_title": "Environmental and Social Aspects",
+    "chunk": "7.1 This TC does not have applicable requirements of the Bank’s Environmental and Social Policy Framework (ESPF).",
+    "chunk_id": "CO-T1779_7.1",
+    "policy_references": [],
+    "risk_level": "Low",
+    "compliance_status": "Not_Applicable"
+  }
+]

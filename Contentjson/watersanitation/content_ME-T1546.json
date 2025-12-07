@@ -1,0 +1,100 @@
+[
+  {
+    "chunk_title": "Objective and Justification – General Objective",
+    "chunk": "2.1 The general objective of this TC is to promote the development, integration and scaling of innovative solutions in the water, sanitation and solid waste sector, which contribute to the achievement of universal access to quality water, sanitation and solid waste services, managed in an efficient manner, safely, sustainable and resilient. The specific objectives are (i) to promote the agenda of innovation and to foster alliances between actors; (ii) strengthen demand for innovative solutions; (iii) identify and support current and future loan operations.",
+    "chunk_id": "ME-T1546_2.1",
+    "policy_references": [
+      "water_access_and_service_quality",
+      "sanitation_and_wastewater_management",
+      "solid_waste_and_circular_economy",
+      "innovation_and_digital_solutions",
+      "utility_management_and_capacity",
+      "service_equity_and_inclusion",
+      "climate_resilient_water_infrastructure"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Objective and Justification – Service Gaps and Climate Challenges",
+    "chunk": "2.2 In Mexico, water, sanitation and solid waste operators face challenges in several fronts, including improvement of efficiency and reduction of GHG emissions, management of water resources incorporating the impacts of climate change, resiliency against natural disasters, integrated solid waste management and circular economy. Although Mexico has high levels of potable water and sewerage coverage (96.1% in both cases, in 2020), in 2022, only 43% of the population had access to safe water supplies and 63% to hygienic sanitation services. These deficiencies have adverse impacts on the health and the economic welfare of the population.",
+    "chunk_id": "ME-T1546_2.2a",
+    "policy_references": [
+      "water_access_and_service_quality",
+      "sanitation_and_wastewater_management",
+      "integrated_water_resources_management",
+      "solid_waste_and_circular_economy",
+      "climate_resilient_water_infrastructure",
+      "pollution_control_and_water_quality",
+      "disaster_risk_management"
+    ],
+    "risk_level": "High",
+    "compliance_status": "Partially_Compliant"
+  },
+  {
+    "chunk_title": "Objective and Justification – Solid Waste, Innovation and Expected Benefits",
+    "chunk": "Meanwhile, solid waste treatment—while high in terms of collection coverage—is affected by inadequate conditions for treatment and recycling, creating a risk of water pollution and increasing greenhouse gas emissions. In Mexico, 102,895.00 tons of urban waste are generated daily, of which 83.93% are collected and 78.54% are disposed of in final disposal sites, recycling only 9.63% of the waste generated. These services are legally under the jurisdiction of the municipal level; water and sanitation are usually managed by the same entity, while solid waste management has lacked attention and resources, contributing to the problem of inadequate solid waste disposal, including biosolids from wastewater treatment plants, worsening the pollution of surface and ground waters. With an increasing population and the growing effects of climate change, these challenges must be urgently addressed with insufficient time and resources; technological innovation can play a key role in providing more effective and faster solutions. Sector institutions in Mexico, such as the Ministry for the Environment and Natural Resources (SEMARNAT), National Water Commission (CONAGUA), National Association of Water and Sanitation Entities (ANEAS), also consider the role of innovation as crucial for the operators to be able to overcome these challenges. Newly appointed President, Claudia Sheinbaum, expressed her commitment to promoting innovation; among her key projects, the development of technological solutions for the efficient use of water and energy was included as part of a new technological development plan for Mexico. This technical cooperation can, thus, help setting up financing schemes and operations, by supporting the elaboration of such studies and pre-investment projects, duly considering Japanese innovation and state-of-the art expertise. The TC will directly benefit sectoral organizations related to water, sanitation, and solid waste, and indirectly benefit households and users of these services in Mexico. It is expected that the adoption and/or adaptation of innovative solutions (e.g., innovative management models, or technologies for loss reduction, etc.) will contribute to supporting the efforts of the countries in the region to achieve sectoral sustainable development goals, duly considering the potential impacts of climate change emergencies and natural disasters.",
+    "chunk_id": "ME-T1546_2.2b",
+    "policy_references": [
+      "solid_waste_and_circular_economy",
+      "pollution_control_and_water_quality",
+      "innovation_and_digital_solutions",
+      "water_governance_and_regulation",
+      "sector_financing_and_tariffs",
+      "climate_resilient_water_infrastructure",
+      "disaster_risk_management"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Description of Activities and Outputs – Component I",
+    "chunk": "3.1 Component I: Strengthening national innovation ecosystem and identification of new projects. Analyze key aspects of the ecosystem and the demand for solutions, identifying opportunities for innovation in the sector. Consulting services will be funded for (i) intelligence and diagnostics focused on strengthening innovation units; (ii) development and application of methodologies and tools; (iii) identification and introduction of solutions; and (iv) development of a study and technical note on Japan's cutting-edge solutions focused on solid waste management.",
+    "chunk_id": "ME-T1546_3.1",
+    "policy_references": [
+      "innovation_and_digital_solutions",
+      "utility_management_and_capacity",
+      "solid_waste_and_circular_economy",
+      "data_monitoring_and_information_systems"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Description of Activities and Outputs – Component II",
+    "chunk": "3.2 Component II: Promotion of the innovation agenda and fostering of alliances between actors. (i) open innovation events and calls; (ii) strengthening, exchange, and dialogue among service providers, innovators, and investors in Mexico, as well as between Mexico and other countries; (iii) dissemination and enhancement of knowledge products on innovation. Under this component, the Bank will incorporate lessons learned from relevant activities and disseminate existing knowledge products, including the participation of Japanese experts and innovative solutions.",
+    "chunk_id": "ME-T1546_3.2",
+    "policy_references": [
+      "innovation_and_digital_solutions",
+      "utility_management_and_capacity",
+      "water_governance_and_regulation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Budget",
+    "chunk": "IV. Budget\nIndicative Budget (in US$)\nActivity/Component IDB/Fund Funding Total Funding\nStrengthening national innovation ecosystem and identification of new projects $400,000.00 $400,000.00\nPromotion of the innovation agenda and fostering of alliances between actors $200,000.00 $200,000.00\nTotal $600,000.00 $600,000.00",
+    "chunk_id": "ME-T1546_4",
+    "policy_references": [
+      "sector_financing_and_tariffs",
+      "water_governance_and_regulation"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Executing Agency, Execution Structure, Risks and ESPF Alignment",
+    "chunk": "V. Executing Agency and Execution Structure\n5.1 Due to federal budgetary reasons in the country the TC will be executed by the Bank, through the Water and Sanitation Division (WSA). The Terms of Reference for the activities will be finalized in coordination with the sector institutions (water, sanitation and solid waste operators, SEMARNAT, CONAGUA, and/or ANEAS). 5.2 All procurement to be executed under this TC will be hired in compliance with the applicable Bank policies and regulations as follows: (a) Hiring of individual consultants, as established in the regulation on Complementary Workforce (AM-650) and (b) Contracting of services provided by consulting firms and non-consulting services in accordance with the Corporate procurement Policy (GN-2303-33) and its Guidelines. Monitoring and Evaluation. The execution monitoring will be carried out through the following mechanisms: (i) technical working meetings between the water and sanitation IDB's team in Mexico and the consultants; (ii) IDB’s review (and eventually the beneficiaries’ entities) of the technical reports to be presented by the consultants; and (iii) coordination meetings. From the date of the signing of the first consultancy contract, at the end of each year, and after the closing date, the IDB team will address all relevant CT reporting and evaluation requirements, including at least: (i) description of progress; (ii) relevant technical aspects to highlight; and (iii) execution problems and pending issues.\nVI. Project Risks and Issues\n6.1 The major risk during the execution of this TC is the potential delay in execution of the consulting services due to a lack of coordination between the Bank, as the Executing Agency, and Mexican sector institutions. To mitigate this risk, the Bank’s team will maintain regular meetings with such institutions. WSA has significant experience executing TCs in the water, sanitation and solid waste sector that requires close coordination with the counterparts, and the division has very solid capacity locally in the Country Office of Mexico.\nVII. Environmental and Social Aspects\n7.1 This Technical Cooperation is intended to finance pre-feasibility or feasibility studies of specific investment projects and the environmental and social studies associated with them; therefore, the terms of reference and products of this TC will be consistent with the applicable requirements of the Bank’s Environmental and Social Policy Framework (ESPF).",
+    "chunk_id": "ME-T1546_5to7",
+    "policy_references": [
+      "water_governance_and_regulation",
+      "utility_management_and_capacity",
+      "data_monitoring_and_information_systems",
+      "disaster_risk_management",
+      "pollution_control_and_water_quality"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  }
+]

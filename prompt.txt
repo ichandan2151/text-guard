@@ -1,0 +1,56 @@
+INSTRUCTIONS:
+Your task is to read the provided text chunk and classify it according to transportation-related policy categories, risk level, and compliance status.
+You must output a single JSON object following the schema below, with no additional text or commentary
+
+Policy Labels (use exact strings):
+[
+    "climate_ghg_emissions",
+    "transport_electrification",
+    "low_carbon_fuels",
+    "transport_demand_management",
+    "land_use_and_smart_growth",
+    "public_and_active_transportation",
+    "transport_infrastructure",
+    "climate_resilience_and_adaptation",
+    "transport_equity_and_access",
+    "transport_safety",
+    "freight_and_goods_movement",
+    "transport_funding_and_finance",
+    "governance_and_regulation",
+    "mobility_innovation_and_technology",
+    "air_quality_and_health",
+    "behavior_change_policies",
+    "vehicle_standards_and_efficiency",
+    "accessibility_and_disability"
+]
+
+Risk Labels:
+["Low", "Medium", "High"]
+
+Compliance Status Labels:
+[
+    "Compliant",
+    "Partially_Compliant",
+    "Non-Compliant",
+    "In_Progress",
+    "Not_Applicable"
+]
+
+Your Output JSON Structure (required)
+
+{
+  "chunk_title": "<title of the text chunk or a short descriptive summary>",
+  "chunk": "<the original text chunk exactly as provided>",
+  "chunk_id": "<unique identifier provided>",
+  "policy_references": [
+      // one or more policy labels from the list above
+  ],
+  "risk_level": "<Low | Medium | High>",
+  "compliance_status": "<Compliant | Partially_Compliant | Non-Compliant | In_Progress | Not_Applicable>"
+}
+
+Use the following text:
+<Text_Placeholder>
+
+Final Instruction
+Return only the JSON object. Do not explain your reasoning.

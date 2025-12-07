@@ -1,0 +1,110 @@
+[
+  {
+    "chunk_title": "Basic Project Data – Overview",
+    "chunk": "Basic Project Data ▪ Country/Region: BELIZE/CID - Isthmus & DR ▪ TC Name: Support to the Sustainable and Inclusive Urban Development Program ...",
+    "chunk_id": "BL-T1168_1",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "urban_finance_and_funding",
+      "capacity_building_and_technical_assistance",
+      "land_use_and_territorial_planning"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "TC Objective – Pre-investment Studies",
+    "chunk": "This Technical Cooperation aims to support the implementation of the Sustainable and Inclusive Urban Development Program...",
+    "chunk_id": "BL-T1168_2",
+    "policy_references": [
+      "urban_infrastructure",
+      "housing_and_settlement_planning",
+      "urban_governance_and_institutions",
+      "capacity_building_and_technical_assistance"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Urban Context – Challenges in Belize",
+    "chunk": "The main populated towns in northern Belize are Orange Walk, Corozal, and San Pedro... These municipalities face challenges including urban services deficits, lack of economic diversification, vulnerability to natural risks...",
+    "chunk_id": "BL-T1168_3",
+    "policy_references": [
+      "urban_infrastructure",
+      "local_economic_development",
+      "climate_resilience_and_adaptation",
+      "social_inclusion_and_equity",
+      "public_service_delivery"
+    ],
+    "risk_level": "High",
+    "compliance_status": "Not_Applicable"
+  },
+  {
+    "chunk_title": "Program Components – Institutional Strengthening",
+    "chunk": "Component I aims to strengthen municipal capacities by elaborating plans and adopting digital tools...",
+    "chunk_id": "BL-T1168_4",
+    "policy_references": [
+      "capacity_building_and_technical_assistance",
+      "data_and_digital_governance",
+      "land_use_and_territorial_planning"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Program Components – Sustainable Urban Investments",
+    "chunk": "Component II finances multisectoral sustainable infrastructural investments in vulnerable neighborhoods...",
+    "chunk_id": "BL-T1168_5",
+    "policy_references": [
+      "urban_infrastructure",
+      "social_inclusion_and_equity",
+      "climate_resilience_and_adaptation"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Implementation Structure",
+    "chunk": "The Ministry of Finance, Economic Development, and Investment will act as Executing Agency...",
+    "chunk_id": "BL-T1168_6",
+    "policy_references": [
+      "urban_governance_and_institutions",
+      "urban_finance_and_funding"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "Compliant"
+  },
+  {
+    "chunk_title": "TC Justification – Risk Mitigation",
+    "chunk": "One of the medium-high level risks identified is the lack of experience of the CEU implementing infrastructure and multiple works programs...",
+    "chunk_id": "BL-T1168_7",
+    "policy_references": [
+      "capacity_building_and_technical_assistance",
+      "urban_governance_and_institutions",
+      "disaster_risk_management"
+    ],
+    "risk_level": "Medium",
+    "compliance_status": "Partially_Compliant"
+  },
+  {
+    "chunk_title": "Budget Summary",
+    "chunk": "Budget Indicative Budget Development of Pre-investment Studies... Total USD 500,000",
+    "chunk_id": "BL-T1168_8",
+    "policy_references": [
+      "urban_finance_and_funding"
+    ],
+    "risk_level": "Low",
+    "compliance_status": "In_Progress"
+  },
+  {
+    "chunk_title": "Environmental and Social Aspects",
+    "chunk": "This Technical Cooperation is intended to finance pre-feasibility or feasibility studies and associated environmental and social studies...",
+    "chunk_id": "BL-T1168_9",
+    "policy_references": [
+      "environmental_management",
+      "climate_resilience_and_adaptation"
+    ],
+    "risk_level": "High",
+    "compliance_status": "Compliant"
+  }
+]
