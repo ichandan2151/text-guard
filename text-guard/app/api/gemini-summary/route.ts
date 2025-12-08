@@ -1,4 +1,3 @@
-// app/api/gemini-summary/route.ts
 import { NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
 
@@ -43,23 +42,18 @@ Document:
 - File name: ${fileName || "Unknown"}
 - Uploaded at: ${createdAt || "Unknown"}
 - Total text chunks: ${totalChunks ?? "Unknown"}
-
 - Risk chunks: ${riskChunks ?? "Unknown"}
 - No-risk chunks: ${noRiskChunks ?? "Unknown"}
 - Overall risk score: ${humanReadableScore}
 `;
 
-const response = await ai.models.generateContent({
-  model: "gemini-2.5-flash",
-  contents: prompt,
-});
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: prompt,
+    });
 
-// TS thinks `text` might be undefined, so guard it
-const text =
-  typeof (response as any).text === "function"
-    ? (response as any).text()
-    : "";
-
+    // `text` is a PROPERTY, not a function
+    const text = (response.text ?? "") as string;
 
     return NextResponse.json({ text });
   } catch (err) {
