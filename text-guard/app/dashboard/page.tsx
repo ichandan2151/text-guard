@@ -67,6 +67,13 @@ async function callProcessor({
   return data;
 }
 
+function getFileExtension(fileName: string | null) {
+  if (!fileName) return "";
+  const parts = fileName.split(".");
+  if (parts.length < 2) return "";
+  return parts[parts.length - 1].toUpperCase();
+}
+
 export default function DashboardPage() {
   const router = useRouter();
 
@@ -201,7 +208,7 @@ export default function DashboardPage() {
         });
       }
 
-      // 4) Refresh table
+      // 4) Refresh cards
       await fetchDocuments();
 
       // reset selection
@@ -211,6 +218,13 @@ export default function DashboardPage() {
       }
     } finally {
       setUploading(false);
+    }
+  };
+
+  // open details page in a new tab
+  const handleOpenDetails = (id: string) => {
+    if (typeof window !== "undefined") {
+      window.open(`/dashboard/${id}`, "_blank");
     }
   };
 
@@ -226,7 +240,7 @@ export default function DashboardPage() {
         padding: "40px 16px",
       }}
     >
-      <div style={{ width: "100%", maxWidth: 1000 }}>
+      <div style={{ width: "100%", maxWidth: 1200 }}>
         {/* Top bar: title + logout */}
         <div
           style={{
@@ -318,170 +332,250 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Document log card */}
-        <section
-          style={{
-            backgroundColor: "#020617",
-            borderRadius: 20,
-            border: "1px solid #1f2937",
-            padding: 20,
-            boxShadow: "0 20px 45px rgba(0,0,0,0.7)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginBottom: 12,
-            }}
-          >
-            <h2
-              style={{
-                fontSize: 13,
-                letterSpacing: 1,
-                textTransform: "uppercase",
-                color: "#9ca3af",
-              }}
-            >
-              Document log
-            </h2>
-            {loading && (
-              <span style={{ fontSize: 12, color: "#9ca3af" }}>Loading…</span>
-            )}
-          </div>
-
+        {/* Status / loading */}
+        <div style={{ marginBottom: 12 }}>
+          {loading && (
+            <span style={{ fontSize: 12, color: "#9ca3af" }}>Loading…</span>
+          )}
           {error && (
-            <p style={{ fontSize: 13, color: "#f97373", marginBottom: 8 }}>
+            <p style={{ fontSize: 13, color: "#f97373", marginTop: 4 }}>
               {error}
             </p>
           )}
+        </div>
 
-          {!loading && docs.length === 0 && !error && (
-            <p style={{ fontSize: 13, color: "#9ca3af" }}>
-              No documents uploaded yet. Upload a file using the control above.
-            </p>
-          )}
+        {/* Cards grid */}
+        {!loading && docs.length === 0 && !error && (
+          <p style={{ fontSize: 13, color: "#9ca3af" }}>
+            No documents uploaded yet. Upload a file using the control above.
+          </p>
+        )}
 
-          {docs.length > 0 && (
-            <div style={{ overflowX: "auto" }}>
-              <table
-                style={{
-                  width: "100%",
-                  borderCollapse: "collapse",
-                  fontSize: 13,
-                }}
-              >
-                <thead>
-                  <tr
+        {docs.length > 0 && (
+          <section
+            style={{
+              display: "grid",
+              gridTemplateColumns:
+                "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: 20,
+            }}
+          >
+            {docs.map((doc) => {
+              const total = doc.total_chunks ?? 0;
+              const risk = doc.risk_chunks ?? 0;
+              const noRisk = doc.no_risk_chunks ?? 0;
+              const score =
+                doc.risk_score ?? (total ? risk / total : null);
+
+              const extension = getFileExtension(doc.file_name);
+
+              return (
+                <article
+                  key={doc.id}
+                  onClick={() => handleOpenDetails(doc.id)}
+                  style={{
+                    cursor: "pointer",
+                    borderRadius: 20,
+                    border: "1px solid #1f2937",
+                    padding: 16,
+                    background:
+                      "radial-gradient(circle at top, rgba(15,23,42,0.8), #020617 60%)",
+                    boxShadow: "0 18px 40px rgba(0,0,0,0.65)",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 12,
+                    transition:
+                      "transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLDivElement).style.transform =
+                      "translateY(-3px)";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow =
+                      "0 25px 60px rgba(0,0,0,0.8)";
+                    (e.currentTarget as HTMLDivElement).style.borderColor =
+                      "#1d4ed8";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLDivElement).style.transform =
+                      "translateY(0)";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow =
+                      "0 18px 40px rgba(0,0,0,0.65)";
+                    (e.currentTarget as HTMLDivElement).style.borderColor =
+                      "#1f2937";
+                  }}
+                >
+                  {/* Document preview block */}
+                  <div
                     style={{
-                      borderBottom: "1px solid #1f2937",
-                      color: "#9ca3af",
+                      borderRadius: 14,
+                      background:
+                        "linear-gradient(135deg, #0f172a, #020617)",
+                      border: "1px solid #1f2937",
+                      padding: 12,
+                      minHeight: 120,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      gap: 8,
                     }}
                   >
-                    <th style={{ textAlign: "left", padding: "8px 8px" }}>
-                      File
-                    </th>
-                    <th style={{ textAlign: "left", padding: "8px 8px" }}>
-                      Uploaded
-                    </th>
-                    <th style={{ textAlign: "right", padding: "8px 8px" }}>
-                      Chunks
-                    </th>
-                    <th style={{ textAlign: "right", padding: "8px 8px" }}>
-                      Risk
-                    </th>
-                    <th style={{ textAlign: "right", padding: "8px 8px" }}>
-                      No risk
-                    </th>
-                    <th style={{ textAlign: "right", padding: "8px 8px" }}>
-                      Risk score
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {docs.map((doc) => {
-                    const total = doc.total_chunks ?? 0;
-                    const risk = doc.risk_chunks ?? 0;
-                    const noRisk = doc.no_risk_chunks ?? 0;
-                    const score =
-                      doc.risk_score ?? (total ? risk / total : null);
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        fontSize: 11,
+                        color: "#9ca3af",
+                      }}
+                    >
+                      <span>Preview</span>
+                      {extension && (
+                        <span
+                          style={{
+                            padding: "2px 8px",
+                            borderRadius: 999,
+                            border: "1px solid #1f2937",
+                          }}
+                        >
+                          {extension}
+                        </span>
+                      )}
+                    </div>
+                    <div
+                      style={{
+                        marginTop: 4,
+                        padding: 8,
+                        borderRadius: 10,
+                        border: "1px dashed #1f2937",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 4,
+                      }}
+                    >
+                      <div
+                        style={{
+                          height: 4,
+                          borderRadius: 999,
+                          background:
+                            "linear-gradient(to right, #22c55e, transparent)",
+                        }}
+                      />
+                      <div
+                        style={{
+                          height: 4,
+                          borderRadius: 999,
+                          background:
+                            "linear-gradient(to right, #38bdf8, transparent)",
+                        }}
+                      />
+                      <div
+                        style={{
+                          height: 4,
+                          borderRadius: 999,
+                          background:
+                            "linear-gradient(to right, #fbbf24, transparent)",
+                        }}
+                      />
+                    </div>
+                  </div>
 
-                    return (
-                      <tr
-                        key={doc.id}
-                        style={{ borderBottom: "1px solid #111827" }}
+                  {/* File info */}
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <span
+                      style={{
+                        fontWeight: 500,
+                        fontSize: 14,
+                        maxWidth: "100%",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                      title={doc.file_name ?? undefined}
+                    >
+                      {doc.file_name || "Untitled document"}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: 11,
+                        color: "#9ca3af",
+                        marginTop: 2,
+                      }}
+                    >
+                      {new Date(doc.created_at).toLocaleString()}
+                    </span>
+
+                    {doc.document_link && (
+                      <a
+                        href={doc.document_link}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                          fontSize: 11,
+                          color: "#38bdf8",
+                          marginTop: 4,
+                        }}
                       >
-                        <td style={{ padding: "8px 8px" }}>
-                          <div
-                            style={{
-                              display: "flex",
-                              flexDirection: "column",
-                            }}
-                          >
-                            <span
-                              style={{
-                                fontWeight: 500,
-                                maxWidth: 260,
-                                whiteSpace: "nowrap",
-                                overflow: "hidden",
-                                textOverflow: "ellipsis",
-                              }}
-                            >
-                              {doc.file_name}
-                            </span>
-                            {doc.document_link && (
-                              <a
-                                href={doc.document_link}
-                                target="_blank"
-                                rel="noreferrer"
-                                style={{
-                                  fontSize: 11,
-                                  color: "#38bdf8",
-                                  marginTop: 2,
-                                }}
-                              >
-                                View source
-                              </a>
-                            )}
-                          </div>
-                        </td>
-                        <td style={{ padding: "8px 8px", color: "#e5e7eb" }}>
-                          {new Date(doc.created_at).toLocaleString()}
-                        </td>
-                        <td style={{ padding: "8px 8px", textAlign: "right" }}>
-                          {total || "—"}
-                        </td>
-                        <td
-                          style={{
-                            padding: "8px 8px",
-                            textAlign: "right",
-                            color: "#fbbf24",
-                          }}
-                        >
-                          {risk || "—"}
-                        </td>
-                        <td
-                          style={{
-                            padding: "8px 8px",
-                            textAlign: "right",
-                            color: "#34d399",
-                          }}
-                        >
-                          {noRisk || "—"}
-                        </td>
-                        <td style={{ padding: "8px 8px", textAlign: "right" }}>
-                          {score !== null
-                            ? `${(score * 100).toFixed(1)}%`
-                            : "—"}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </section>
+                        View source
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Risk stats */}
+                  <div
+                    style={{
+                      marginTop: "auto",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      gap: 8,
+                      fontSize: 11,
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                      }}
+                    >
+                      <span style={{ color: "#6b7280" }}>Risk</span>
+                      <span style={{ color: "#fbbf24", fontWeight: 600 }}>
+                        {risk || "—"}
+                      </span>
+                    </div>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                      }}
+                    >
+                      <span style={{ color: "#6b7280" }}>No risk</span>
+                      <span style={{ color: "#34d399", fontWeight: 600 }}>
+                        {noRisk || "—"}
+                      </span>
+                    </div>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-end",
+                        marginLeft: "auto",
+                      }}
+                    >
+                      <span style={{ color: "#6b7280" }}>Risk score</span>
+                      <span style={{ fontWeight: 600 }}>
+                        {score !== null ? `${(score * 100).toFixed(1)}%` : "—"}
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </section>
+        )}
       </div>
     </main>
   );
