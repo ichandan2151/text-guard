@@ -16,19 +16,14 @@ type DocumentRow = {
   risk_chunks: number | null;
   no_risk_chunks: number | null;
   risk_score: number | null;
-  processing_status: string | null;        // you already have this column
-
-  // NEW
+  processing_status: string | null;
   ai_insight: string | null;
   ai_insight_model: string | null;
   ai_insight_generated_at: string | null;
 };
 
-
-// Cloud Run URL (set in .env.local)
 const PROCESSOR_URL = process.env.NEXT_PUBLIC_PROCESSOR_URL;
 
-// ---- helper to call Cloud Run processor ----
 async function callProcessor({
   documentId,
   storagePath,
@@ -45,17 +40,9 @@ async function callProcessor({
 
   const url = `${PROCESSOR_URL.replace(/\/$/, "")}/process_document`;
 
-  console.log("Calling processor:", url, {
-    document_id: documentId,
-    storage_path: storagePath,
-    file_name: fileName,
-  });
-
   const res = await fetch(url, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       document_id: documentId,
       storage_path: storagePath,
@@ -69,9 +56,7 @@ async function callProcessor({
     throw new Error(`Processor failed (${res.status})`);
   }
 
-  const data = await res.json();
-  console.log("Processor response:", data);
-  return data;
+  return res.json();
 }
 
 function getFileExtension(fileName: string | null) {
@@ -94,9 +79,6 @@ export default function DashboardPage() {
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  console.log("Processor URL (client):", PROCESSOR_URL);
-
-  // ---------- auth check + load documents ----------
   useEffect(() => {
     const init = async () => {
       const {
@@ -134,13 +116,11 @@ export default function DashboardPage() {
     setLoading(false);
   };
 
-  // ---------- logout ----------
   const handleLogout = async () => {
     await supabase.auth.signOut();
     router.push("/login");
   };
 
-  // ---------- upload handlers ----------
   const handleOpenFilePicker = () => {
     setUploadError(null);
     fileInputRef.current?.click();
@@ -170,9 +150,8 @@ export default function DashboardPage() {
 
       const filePath = `${Date.now()}-${file.name}`;
 
-      // 1) Upload to Supabase Storage bucket "documents"
       const { data: storageData, error: storageError } = await supabase.storage
-        .from("documents") // bucket name
+        .from("documents")
         .upload(filePath, file);
 
       if (storageError || !storageData) {
@@ -180,27 +159,24 @@ export default function DashboardPage() {
         throw new Error("Failed to upload file to storage.");
       }
 
-      console.log("Uploaded to storage:", storageData.path);
-
-      // 2) Get a public URL for preview
       const { data: publicUrlData } = supabase.storage
         .from("documents")
         .getPublicUrl(storageData.path);
 
       const publicUrl = publicUrlData?.publicUrl ?? null;
 
-      // 3) Insert row into "documents" table and get the row back
       const { data: inserted, error: insertError } = await supabase
         .from("documents")
         .insert({
           file_name: file.name,
           storage_path: storageData.path,
-          document_link: publicUrl, // <-- store preview URL here
+          document_link: publicUrl,
           project_name: null,
           total_chunks: null,
           risk_chunks: null,
           no_risk_chunks: null,
           risk_score: null,
+          processing_status: "processing",
         })
         .select("*")
         .limit(1);
@@ -211,9 +187,7 @@ export default function DashboardPage() {
       }
 
       const docRow = inserted?.[0] as DocumentRow | undefined;
-      console.log("Inserted documents row:", docRow);
 
-      // 4) Call Cloud Run processor to chunk + run BERT + update DB
       if (docRow) {
         await callProcessor({
           documentId: docRow.id,
@@ -222,10 +196,8 @@ export default function DashboardPage() {
         });
       }
 
-      // 5) Refresh cards
       await fetchDocuments();
 
-      // reset selection
       setSelectedFile(null);
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
@@ -235,14 +207,12 @@ export default function DashboardPage() {
     }
   };
 
-  // open details page in a new tab
   const handleOpenDetails = (id: string) => {
     if (typeof window !== "undefined") {
       window.open(`/dashboard/${id}`, "_blank");
     }
   };
 
-  // ---------- UI ----------
   return (
     <main
       style={{
@@ -255,96 +225,132 @@ export default function DashboardPage() {
       }}
     >
       <div style={{ width: "100%", maxWidth: 1200 }}>
-        {/* Top bar: title + logout */}
-        <div
+        {/* HERO / HEADER - centered, no 'View documents' */}
+        <header
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 16,
-            marginBottom: 16,
+            marginBottom: 32,
+            paddingBottom: 24,
+            borderBottom: "1px solid #111827",
           }}
         >
-          <div>
-            <h1 style={{ fontSize: 24, margin: 0 }}>TextGuard Dashboard</h1>
-            <p style={{ fontSize: 13, color: "#9ca3af", marginTop: 4 }}>
-              View scanned documents and upload new files for risk analysis.
-            </p>
-          </div>
-
-          <button
-            onClick={handleLogout}
+          {/* Logout row */}
+          <div
             style={{
-              padding: "6px 14px",
-              borderRadius: 999,
-              border: "1px solid #374151",
-              backgroundColor: "transparent",
-              color: "#e5e7eb",
-              fontSize: 13,
-              cursor: "pointer",
+              display: "flex",
+              justifyContent: "flex-end",
+              marginBottom: 24,
             }}
           >
-            Log out
-          </button>
-        </div>
-
-        {/* Upload controls */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 16,
-            marginBottom: 24,
-            flexWrap: "wrap",
-          }}
-        >
-          <div style={{ fontSize: 13, color: "#9ca3af" }}>
-            Upload a new project document (PDF / DOCX) to run TextGuard on it.
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {/* Hidden input – opened by the button */}
-            <input
-              ref={fileInputRef}
-              type="file"
-              id="file-input"
-              onChange={handleFileChange}
-              style={{ display: "none" }}
-            />
-
             <button
-              type="button"
-              onClick={handleOpenFilePicker}
-              disabled={uploading}
+              onClick={handleLogout}
               style={{
-                padding: "10px 18px",
+                padding: "8px 16px",
                 borderRadius: 999,
-                border: "none",
-                backgroundColor: "#22c55e",
-                color: "#022c22",
+                border: "1px solid #374151",
+                backgroundColor: "transparent",
+                color: "#e5e7eb",
                 fontSize: 13,
-                fontWeight: 500,
-                cursor: uploading ? "default" : "pointer",
-                opacity: uploading ? 0.7 : 1,
-                minWidth: 140,
+                cursor: "pointer",
+                whiteSpace: "nowrap",
               }}
             >
-              {uploading ? "Uploading…" : "Upload file"}
+              Log out
             </button>
-
-            {selectedFile && !uploading && (
-              <span style={{ fontSize: 12, color: "#e5e7eb" }}>
-                Selected: {selectedFile.name}
-              </span>
-            )}
-
-            {uploadError && (
-              <span style={{ color: "#f97373", fontSize: 12 }}>
-                {uploadError}
-              </span>
-            )}
           </div>
-        </div>
+
+          {/* Centered hero content */}
+          <div
+            style={{
+              maxWidth: 720,
+              margin: "0 auto",
+              textAlign: "center",
+            }}
+          >
+            <h1
+              style={{
+                fontSize: 36,
+                lineHeight: 1.1,
+                margin: 0,
+                fontWeight: 600,
+              }}
+            >
+              Automated Risk &amp; Compliance Auditor
+            </h1>
+            <p
+              style={{
+                marginTop: 12,
+                marginBottom: 16,
+                fontSize: 14,
+                color: "#9ca3af",
+              }}
+            >
+              Assess project documentation for social, environmental, and governance risks. Upload files and examine TextGuard's AI-powered insights
+            </p>
+
+            <p
+              style={{
+                marginTop: 0,
+                marginBottom: 20,
+                fontSize: 13,
+                color: "#9ca3af",
+              }}
+            >
+              Upload your supervision reports, memos, or audits and check them
+              against your internal risk and compliance policies.
+            </p>
+
+            {/* Upload control */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              <input
+                ref={fileInputRef}
+                type="file"
+                id="file-input"
+                onChange={handleFileChange}
+                style={{ display: "none" }}
+              />
+
+              <button
+                type="button"
+                onClick={handleOpenFilePicker}
+                disabled={uploading}
+                style={{
+                  padding: "10px 22px",
+                  borderRadius: 999,
+                  border: "none",
+                  background:
+                    "linear-gradient(to right, #2563eb, #1d4ed8, #1d4ed8)",
+                  color: "#f9fafb",
+                  fontSize: 14,
+                  fontWeight: 600,
+                  cursor: uploading ? "default" : "pointer",
+                  opacity: uploading ? 0.7 : 1,
+                  minWidth: 180,
+                }}
+              >
+                {uploading ? "Uploading…" : "Upload document"}
+              </button>
+
+              {selectedFile && !uploading && (
+                <span style={{ fontSize: 12, color: "#9ca3af" }}>
+                  Selected: {selectedFile.name}
+                </span>
+              )}
+
+              {uploadError && (
+                <span style={{ fontSize: 12, color: "#f97373" }}>
+                  {uploadError}
+                </span>
+              )}
+            </div>
+          </div>
+        </header>
 
         {/* Status / loading */}
         <div style={{ marginBottom: 12 }}>
@@ -361,16 +367,16 @@ export default function DashboardPage() {
         {/* Cards grid */}
         {!loading && docs.length === 0 && !error && (
           <p style={{ fontSize: 13, color: "#9ca3af" }}>
-            No documents uploaded yet. Upload a file using the control above.
+            No documents uploaded yet. Upload a file using the button above.
           </p>
         )}
 
         {docs.length > 0 && (
           <section
+            id="document-grid"
             style={{
               display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fit, minmax(220px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
               gap: 20,
             }}
           >
@@ -420,7 +426,6 @@ export default function DashboardPage() {
                       "#1f2937";
                   }}
                 >
-                  {/* REAL PDF preview block */}
                   <div
                     style={{
                       borderRadius: 14,
@@ -469,7 +474,6 @@ export default function DashboardPage() {
                         }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        {/* mini embedded PDF – first page view */}
                         <iframe
                           src={`${previewUrl}#toolbar=0&navpanes=0&scrollbar=0`}
                           style={{
@@ -481,7 +485,6 @@ export default function DashboardPage() {
                         />
                       </div>
                     ) : (
-                      // fallback fake preview for non-PDF / missing URL
                       <div
                         style={{
                           marginTop: 4,
@@ -521,7 +524,6 @@ export default function DashboardPage() {
                     )}
                   </div>
 
-                  {/* File info */}
                   <div style={{ display: "flex", flexDirection: "column" }}>
                     <span
                       style={{
@@ -563,7 +565,6 @@ export default function DashboardPage() {
                     )}
                   </div>
 
-                  {/* Risk stats */}
                   <div
                     style={{
                       marginTop: "auto",
