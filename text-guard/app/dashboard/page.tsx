@@ -16,7 +16,14 @@ type DocumentRow = {
   risk_chunks: number | null;
   no_risk_chunks: number | null;
   risk_score: number | null;
+  processing_status: string | null;        // you already have this column
+
+  // NEW
+  ai_insight: string | null;
+  ai_insight_model: string | null;
+  ai_insight_generated_at: string | null;
 };
+
 
 // Cloud Run URL (set in .env.local)
 const PROCESSOR_URL = process.env.NEXT_PUBLIC_PROCESSOR_URL;
@@ -175,13 +182,20 @@ export default function DashboardPage() {
 
       console.log("Uploaded to storage:", storageData.path);
 
-      // 2) Insert row into "documents" table and get the row back
+      // 2) Get a public URL for preview
+      const { data: publicUrlData } = supabase.storage
+        .from("documents")
+        .getPublicUrl(storageData.path);
+
+      const publicUrl = publicUrlData?.publicUrl ?? null;
+
+      // 3) Insert row into "documents" table and get the row back
       const { data: inserted, error: insertError } = await supabase
         .from("documents")
         .insert({
           file_name: file.name,
           storage_path: storageData.path,
-          document_link: null,
+          document_link: publicUrl, // <-- store preview URL here
           project_name: null,
           total_chunks: null,
           risk_chunks: null,
@@ -199,7 +213,7 @@ export default function DashboardPage() {
       const docRow = inserted?.[0] as DocumentRow | undefined;
       console.log("Inserted documents row:", docRow);
 
-      // 3) Call Cloud Run processor to chunk + run BERT + update DB
+      // 4) Call Cloud Run processor to chunk + run BERT + update DB
       if (docRow) {
         await callProcessor({
           documentId: docRow.id,
@@ -208,7 +222,7 @@ export default function DashboardPage() {
         });
       }
 
-      // 4) Refresh cards
+      // 5) Refresh cards
       await fetchDocuments();
 
       // reset selection
@@ -368,6 +382,8 @@ export default function DashboardPage() {
                 doc.risk_score ?? (total ? risk / total : null);
 
               const extension = getFileExtension(doc.file_name);
+              const isPdf = extension === "PDF";
+              const previewUrl = doc.document_link || undefined;
 
               return (
                 <article
@@ -404,7 +420,7 @@ export default function DashboardPage() {
                       "#1f2937";
                   }}
                 >
-                  {/* Document preview block */}
+                  {/* REAL PDF preview block */}
                   <div
                     style={{
                       borderRadius: 14,
@@ -441,42 +457,68 @@ export default function DashboardPage() {
                         </span>
                       )}
                     </div>
-                    <div
-                      style={{
-                        marginTop: 4,
-                        padding: 8,
-                        borderRadius: 10,
-                        border: "1px dashed #1f2937",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 4,
-                      }}
-                    >
+
+                    {isPdf && previewUrl ? (
                       <div
                         style={{
-                          height: 4,
-                          borderRadius: 999,
-                          background:
-                            "linear-gradient(to right, #22c55e, transparent)",
+                          marginTop: 6,
+                          borderRadius: 10,
+                          overflow: "hidden",
+                          border: "1px solid #1f2937",
+                          height: 110,
                         }}
-                      />
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {/* mini embedded PDF – first page view */}
+                        <iframe
+                          src={`${previewUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            border: "none",
+                          }}
+                          title={doc.file_name || "PDF preview"}
+                        />
+                      </div>
+                    ) : (
+                      // fallback fake preview for non-PDF / missing URL
                       <div
                         style={{
-                          height: 4,
-                          borderRadius: 999,
-                          background:
-                            "linear-gradient(to right, #38bdf8, transparent)",
+                          marginTop: 4,
+                          padding: 8,
+                          borderRadius: 10,
+                          border: "1px dashed #1f2937",
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 4,
                         }}
-                      />
-                      <div
-                        style={{
-                          height: 4,
-                          borderRadius: 999,
-                          background:
-                            "linear-gradient(to right, #fbbf24, transparent)",
-                        }}
-                      />
-                    </div>
+                      >
+                        <div
+                          style={{
+                            height: 4,
+                            borderRadius: 999,
+                            background:
+                              "linear-gradient(to right, #22c55e, transparent)",
+                          }}
+                        />
+                        <div
+                          style={{
+                            height: 4,
+                            borderRadius: 999,
+                            background:
+                              "linear-gradient(to right, #38bdf8, transparent)",
+                          }}
+                        />
+                        <div
+                          style={{
+                            height: 4,
+                            borderRadius: 999,
+                            background:
+                              "linear-gradient(to right, #fbbf24, transparent)",
+                          }}
+                        />
+                      </div>
+                    )}
                   </div>
 
                   {/* File info */}

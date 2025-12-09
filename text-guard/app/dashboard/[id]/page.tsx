@@ -16,6 +16,11 @@ type DocumentRow = {
   risk_chunks: number | null;
   no_risk_chunks: number | null;
   risk_score: number | null;
+  processing_status: string | null;
+
+  ai_insight: string | null;
+  ai_insight_model: string | null;
+  ai_insight_generated_at: string | null;
 };
 
 export default function DocumentDetailsPage() {
@@ -30,74 +35,96 @@ export default function DocumentDetailsPage() {
 
   const id = params?.id;
 
-  useEffect(() => {
-    const fetchDocAndAnalysis = async () => {
-      if (!id) return;
+useEffect(() => {
+  const fetchDocAndAnalysis = async () => {
+    if (!id) return;
 
-      // auth check
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+    // auth check
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
 
-      if (!user) {
-        router.push("/login");
-        return;
-      }
+    if (!user) {
+      router.push("/login");
+      return;
+    }
 
-      // load document row
-      const { data, error } = await supabase
-        .from("documents")
-        .select("*")
-        .eq("id", id)
-        .single();
+    // load document row
+    const { data, error } = await supabase
+      .from("documents")
+      .select("*")
+      .eq("id", id)
+      .single();
 
-      if (error) {
-        console.error(error);
-        setLoading(false);
-        return;
-      }
-
-      const docData = data as DocumentRow;
-      setDoc(docData);
+    if (error) {
+      console.error(error);
       setLoading(false);
+      return;
+    }
 
-      // call Gemini
-      try {
-        setAiLoading(true);
-        setAiError(null);
+    const docData = data as DocumentRow;
+    setDoc(docData);
+    setLoading(false);
 
-        const res = await fetch("/api/gemini-summary", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            fileName: docData.file_name,
-            createdAt: docData.created_at,
-            totalChunks: docData.total_chunks,
-            riskChunks: docData.risk_chunks,
-            noRiskChunks: docData.no_risk_chunks,
-            riskScore: docData.risk_score,
-          }),
-        });
+    // 1) If we already have an AI insight in DB, use it and skip Gemini
+    if (docData.ai_insight) {
+      setAiText(docData.ai_insight);
+      return;
+    }
 
-        if (!res.ok) {
-          const body = await res.json().catch(() => ({}));
-          throw new Error(body.error || "Failed to fetch Gemini summary.");
-        }
+    // 2) Otherwise call Gemini and then cache result in DB
+    try {
+      setAiLoading(true);
+      setAiError(null);
 
-        const json = await res.json();
-        setAiText(json.text as string);
-      } catch (err) {
-        console.error(err);
-        setAiError(
-          err instanceof Error ? err.message : "Failed to fetch Gemini summary."
-        );
-      } finally {
-        setAiLoading(false);
+      const res = await fetch("/api/gemini-summary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fileName: docData.file_name,
+          createdAt: docData.created_at,
+          totalChunks: docData.total_chunks,
+          riskChunks: docData.risk_chunks,
+          noRiskChunks: docData.no_risk_chunks,
+          riskScore: docData.risk_score,
+        }),
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || "Failed to fetch Gemini summary.");
       }
-    };
 
-    fetchDocAndAnalysis();
-  }, [id, router]);
+      const json = await res.json();
+      const text = (json.text as string) || "";
+
+      setAiText(text);
+
+      // 🔥 cache in DB so we don't regenerate next time
+      const { error: updateError } = await supabase
+        .from("documents")
+        .update({
+          ai_insight: text,
+          ai_insight_model: "gemini-2.5-flash",
+          ai_insight_generated_at: new Date().toISOString(),
+        })
+        .eq("id", docData.id);
+
+      if (updateError) {
+        console.error("Failed to save AI insight:", updateError);
+      }
+    } catch (err) {
+      console.error(err);
+      setAiError(
+        err instanceof Error ? err.message : "Failed to fetch Gemini summary."
+      );
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  fetchDocAndAnalysis();
+}, [id, router]);
 
   return (
     <main
