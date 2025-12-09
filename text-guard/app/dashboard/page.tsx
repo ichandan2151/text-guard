@@ -17,10 +17,18 @@ type DocumentRow = {
   no_risk_chunks: number | null;
   risk_score: number | null;
   processing_status: string | null;
+
+  // AI stuff
   ai_insight: string | null;
   ai_insight_model: string | null;
   ai_insight_generated_at: string | null;
+
+  // NEW (from backend)
+  compliant_chunks: number | null;
+  non_compliant_chunks: number | null;
+  compliance_score: number | null;
 };
+
 
 const PROCESSOR_URL = process.env.NEXT_PUBLIC_PROCESSOR_URL;
 
@@ -613,6 +621,14 @@ export default function DashboardPage() {
                         {score !== null ? `${(score * 100).toFixed(1)}%` : "—"}
                       </span>
                     </div>
+                    {/* <div>
+  <div style={{ color: "#6b7280" }}>Compliance score</div>
+  <div style={{ fontWeight: 600 }}>
+    {doc.compliance_score != null
+      ? `${(doc.compliance_score * 100).toFixed(1)}%`
+      : "—"}
+  </div>
+</div> */}
                   </div>
                 </article>
               );
